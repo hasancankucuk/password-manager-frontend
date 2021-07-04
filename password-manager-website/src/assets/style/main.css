@@ -1,0 +1,438 @@
+.app-header {
+    background-color:#5F9EA0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 65px;
+    line-height: 30px;
+    left: 0;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.sidebar-menu {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 999999 !important;
+    left: 10px;
+    top: 10px;
+}
+
+.sidebar-menu-icon {
+    background-image: url('../icons//menu-bar-icon.svg');
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.logo-header h2 {
+    font-size: 20px;
+    top: -11px;
+    position: absolute
+}
+
+.logo-router {
+    margin-left: 80px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo-router span {
+    display: block;
+    position: absolute;
+    margin-left: 105px;
+}
+
+.form-inline {
+    position: absolute;
+    top: 20px;
+    left: 40%
+}
+
+.form-control {
+    border: none;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.user-info {
+    position: absolute;
+    right: 45px;
+    top: 20px;
+    width: 36px;
+    height: 37px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+.user-info-icon {
+    background-image: url('../icons/user-icon.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 9999999;
+    width: 26px;
+    height: 26px;
+    left: 5px;
+    top: 3px;
+}
+
+.sidenavopen{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 65px;
+    left: 0;
+    background-color: #5F9EA0;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.side-nav-items {
+    text-decoration: none;
+    font-size: 15px;
+    list-style-type: none;
+    position: absolute;
+    line-height: 60px;
+    color: white;
+    cursor: pointer;
+    top: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.side-nav-items a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 25px;
+}
+
+.savedAccountsIcon {
+    background-image: url('../icons/all-paswords-icon.svg');
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    left: 15px;
+    top: 15px;
+}
+
+.addAccountIcon {
+    background-image: url('../icons/add-password-icon.svg');
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    left: 15px;
+    margin-top: 15px;
+}
+
+.passwordGeneratorIcon {
+    background-image: url('../icons/generate-password-icon.svg');
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    left: 15px;
+    margin-top: 15px;
+}
+
+/* .app-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    left: 0;    
+}
+
+.footer-main {
+    background-color: #5F9EA0;
+    height: 100%;
+}
+
+.about p {
+    position: absolute;
+    display: inline-block;
+    width: 20%;
+    left: 35%;
+    color: #cccccc;
+    margin-top: 55px;
+}
+
+.about h4 {
+    color: #e0dddd;
+    position: absolute;
+    left: 41%;
+    padding-bottom: 13px;
+    font-size: 18px;
+} */
+
+.passwordGeneratorMain {
+    position: absolute;
+    border: solid;
+    border-color: #5F9EA0 ;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    top: 100px;
+    left: 25%;
+    bottom: 30px;
+    right: 25%;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.passwordLength {
+    position: absolute;
+    left: 50px;
+    top: 15px;
+}
+
+.passwordLengthItems {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.passwordLengthItems li {
+   margin-bottom: 7px;
+}
+
+.passwordComplexity {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+}
+
+.passwordComplexityItems {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.passwordComplexityItems li {
+    margin-bottom: 7px;
+}
+
+.generatedPasswordSpan {
+    position: absolute;
+    top: 275px;
+    left: 35%;
+    border-bottom: solid;
+    border-width: thin;
+    width: 200px;
+    text-align: center;
+    height: 25px;
+}
+
+.generatedPasswordPlaceholder {
+    position: absolute;
+    top: 275px;
+    left: 35%;
+    border-bottom: solid;
+    border-width: thin;
+    width: 200px;
+    text-align: center;
+    height: 25px;
+    color: gray;
+    font-size: 20px;
+}
+
+.copyGeneratedPasswordButton {
+    position: absolute;
+    top: 400px;
+    left: 40%;
+    width: 130px;
+    height: 55px;
+    border: none;
+    border-radius: 7px;
+    background-color: #5F9EA0;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.copyGeneratedPasswordButton:hover {
+    background-color: #589496;
+    cursor: pointer;
+}
+
+.addAccountMain {
+    position: absolute;
+    border: solid;
+    border-color: #5F9EA0 ;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    top: 100px;
+    left: 25%;
+    bottom: 30px;
+    right: 25%;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.urlList {
+    position: absolute;
+    left: 50px;
+    top: 15px;
+}
+
+.urlListSpan {
+    position: absolute;
+    top:10px;
+}
+
+.urlListInput {
+    position: absolute;
+    top: 30px;
+    width: 450px;
+    height: 30px;
+    font-size: 17px;
+    border: none;
+    border-bottom: solid;
+    border-width: thin;
+    border-color: gray;
+}
+
+.urlListInput:focus {
+    outline: none;
+}
+
+.urlName {
+    position: absolute;
+    margin-top: 100px ;
+}
+
+.urlNameInput {
+    position: absolute;
+    top: 125px;
+    width: 450px;
+    height: 30px;
+    font-size: 17px;
+    border: none;
+    border-bottom: solid;
+    border-width: thin;
+    border-color: gray;
+}
+
+.urlNameInput:focus {
+    outline: none;
+}
+
+.loginInfoBox {
+    position: absolute;
+    display: block;
+    left: 50px;
+    top: 50px;
+}
+
+.userName {
+    position: absolute;
+    top: 150px;
+}
+
+.userNameInput {
+    position: absolute;
+    top: 180px;
+    width: 450px;
+    height: 30px;
+    font-size: 17px;
+    border: none;
+    border-bottom: solid;
+    border-width: thin;
+    border-color: gray;
+}
+
+.userNameInput:focus {
+    outline: none;
+}
+
+.password {
+    position: absolute;
+    top: 240px;
+}
+
+.passwordInput {
+    position: absolute;
+    top: 270px;
+    width: 450px;
+    height: 30px;
+    font-size: 17px;
+    border: none;
+    border-bottom: solid;
+    border-width: thin;
+    border-color: gray;
+}
+
+.passwordInput:focus {
+    outline: none;
+}
+
+.clearButton {
+    position: absolute;
+    bottom: 70px;
+    right: 260px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: #5F9EA0;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.clearButton:hover {
+    cursor: pointer;
+}
+
+.saveButton {
+    position: absolute;
+    bottom: 70px;
+    right: 130px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: #5F9EA0;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.saveButton:hover {
+    cursor: pointer;
+}
+
+.passwordShow {
+    background-image: url('../icons/hide-password-icon.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 275px;
+    width: 20px;
+    height: 20px;
+    left: 425px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.active {
+    background-image: url('../icons/show-password-icon.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 275px;
+    width: 20px;
+    height: 20px;
+    left: 425px;
+    cursor: pointer;
+    user-select: none;
+}
