@@ -41,9 +41,11 @@
             aria-label="Search"
           />
         </form>
+        <router-link to="/profile">
         <button class="user-info">
           <a class="user-info-icon" />
         </button>
+        </router-link>
       </nav>
     </header>
   </section>

@@ -4,6 +4,7 @@ import Home from '../components/pages/Home.vue'
 import AllPasswords from '../components/pages/AllPasswords.vue'
 import PasswordGenerator from '../components/pages/PasswordGenerator.vue'
 import AddAccount from '../components/pages/AddAccount.vue'
+import ProfilePage from '../components/pages/ProfilePage.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
         path: '/add-account',
         name: 'AddAccount',
         component: AddAccount
+    },
+    {
+        path: '/profile',
+        name: 'ProfilePage',
+        component: ProfilePage
     }
 ]
 

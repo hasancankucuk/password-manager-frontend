@@ -33,16 +33,16 @@ export default {
         }
     },
     methods: {
-        clearInfo() {
+        clearInfo () {
             this.urlList = "";
             this.urlName = "";
             this.userName = "";
             this.password = "";
         },
-        saveAccount() {
+        saveAccount () {
             this.$router.push({path: '/all-password'});
         },
-        showPassword() {
+        showPassword () {
             if(this.type == 'password') {
                 this.type = 'text';
             }
