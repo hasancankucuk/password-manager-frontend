@@ -1,0 +1,90 @@
+{
+  "extName": {
+    "message": "Password Manager",
+    "description": ""
+  },
+  "recentlyUsed": {
+    "message": "Recently Used"
+  },
+  "allPasswords": {
+    "message": "All Passwords"
+  },
+  "addPassword": {
+    "message": "Add Password"
+  },
+  "accountOptions": {
+    "message": "Account Settings"
+  },
+  "signOut": {
+    "message": "Sign Out"
+  },
+  "aboutExtension": {
+    "message": "About"
+  },
+  "backToMain" : {
+    "message": "Back"
+  },
+  "notificationSetting": {
+    "message": "Turn Notifications On"
+  },
+  "matchedPasswordSetting": {
+    "message": "Show Number of Matching Sites in Toolbar "
+  },
+  "changeMailSetting": {
+    "message": "Change E-mail Address"
+  },
+  "changePasswordSetting": {
+    "message": "Change Password"
+  },
+  "generatePasswordSetting": {
+    "message": "Generate Secure Password"
+  },
+  "aboutText": {
+    "message": "This Chrome Password Manager extension is created by Hasan Can Küçük as an internship project. Using this extension, you can save your login information and refill the login boxes."
+  },
+  "notificationMessage": {
+    "message": "Saved password found for this website."
+  },
+  "loginHeader": {
+    "message": "Log In"
+  },
+  "signUpHeader": {
+    "message": "Create Account"
+  },
+  "forgotPassword": {
+    "message": "Forgot Password"
+  },
+  "emailBoxPlaceHolder": {
+    "message": "Email Address"
+  },
+  "passwordBoxPlaceHolder": {
+    "message": "Password"
+  },
+  "signUpStart": {
+    "message": "Let's start!"
+  },
+  "finishCreateAccount": {
+    "message": "Finish"
+  },
+  "userAgreement": {
+    "message": "User Agreement"
+  },
+  "confirmPasswordPlaceHolder": {
+    "message": "Confirm Password"
+  },
+  "hintBoxPlaceHolder": {
+    "message": "Password Hint"
+  },
+  "resetPasswordHeader": {
+    "message": "Reset Password"
+  },
+  "resetPasswordSpan": {
+    "message": "Please enter your e-mail."
+  },
+  "cancelButtonText": {
+    "message": "Cancel"
+  },
+  "submitButtonText": {
+    "message": "Submit"
+  }
+}
