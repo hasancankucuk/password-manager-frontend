@@ -1,4 +1,4 @@
-# password-manager-website
+# password-manager-frontend
 
 ## Project setup
 ```
