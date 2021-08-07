@@ -11,17 +11,21 @@
         v-show="opened"
       >
         <ul class="side-nav-items" @click="opened = !opened">
-          <li class="side-nav-savedAccounts" >
-            <div class="savedAccountsIcon"/>
+          <li class="side-nav-savedAccounts">
+            <div class="savedAccountsIcon" />
             <router-link to="/all-passwords"> Accounts </router-link>
           </li>
           <li class="side-nav-addAccount">
-            <div class="addAccountIcon"/>
+            <div class="addAccountIcon" />
             <router-link to="/add-account"> New Account </router-link>
           </li>
           <li class="side-nav-passwordGenerator">
-             <div class="passwordGeneratorIcon"/>
+            <div class="passwordGeneratorIcon" />
             <router-link to="/password-generator"> Generator</router-link>
+          </li>
+          <li class="side-nav-passwordGenerator" @click="logOut()">
+            <div class="logOutIcon" />
+            Log Out
           </li>
         </ul>
       </div>
@@ -32,7 +36,7 @@
           >
         </h2>
       </div>
-      <nav class="menu" >
+      <nav class="menu">
         <form class="form-inline">
           <input
             class="form-control mr-sm-2"
@@ -42,9 +46,9 @@
           />
         </form>
         <router-link to="/profile">
-        <button class="user-info">
-          <a class="user-info-icon" />
-        </button>
+          <button class="user-info">
+            <a class="user-info-icon" />
+          </button>
         </router-link>
       </nav>
     </header>
@@ -52,12 +56,20 @@
 </template>
 
 <script>
+import router from "../../router";
 export default {
   name: "Navbar",
   data() {
     return {
       opened: false,
     };
+  },
+  methods: {
+    logOut() {
+      this.$store.commit("LOGIN_USER");
+      localStorage.removeItem("token");
+      router.push("login");
+    },
   },
 };
 </script>

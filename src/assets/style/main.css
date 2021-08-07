@@ -1,150 +1,163 @@
 .app-header {
-    background-color:#5F9EA0;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 65px;
-    line-height: 30px;
-    left: 0;
-    user-select: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #5f9ea0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 65px;
+  line-height: 30px;
+  left: 0;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .sidebar-menu {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    z-index: 999999 !important;
-    left: 10px;
-    top: 10px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  z-index: 999999 !important;
+  left: 10px;
+  top: 10px;
 }
 
 .sidebar-menu-icon {
-    background-image: url('../icons//menu-bar-icon.svg');
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 10px;
-    cursor: pointer;
+  background-image: url("../icons//menu-bar-icon.svg");
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  cursor: pointer;
 }
 
 .logo-header h2 {
-    font-size: 20px;
-    top: -11px;
-    position: absolute
+  font-size: 20px;
+  top: -11px;
+  position: absolute;
 }
 
 .logo-router {
-    margin-left: 80px;
-    color: white;
-    text-decoration: none;
+  margin-left: 80px;
+  color: white;
+  text-decoration: none;
 }
 
 .logo-router span {
-    display: block;
-    position: absolute;
-    margin-left: 105px;
+  display: block;
+  position: absolute;
+  margin-left: 105px;
 }
 
 .form-inline {
-    position: absolute;
-    top: 20px;
-    left: 40%
+  position: absolute;
+  top: 20px;
+  left: 40%;
 }
 
 .form-control {
-    border: none;
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: none;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .user-info {
-    position: absolute;
-    right: 45px;
-    top: 20px;
-    width: 36px;
-    height: 37px;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
+  position: absolute;
+  right: 45px;
+  top: 20px;
+  width: 36px;
+  height: 37px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
 }
 
 .user-info-icon {
-    background-image: url('../icons/user-icon.svg');
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: 9999999;
-    width: 26px;
-    height: 26px;
-    left: 5px;
-    top: 3px;
+  background-image: url("../icons/user-icon.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 9999999;
+  width: 26px;
+  height: 26px;
+  left: 5px;
+  top: 3px;
 }
 
-.sidenavopen{
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 65px;
-    left: 0;
-    background-color: #5F9EA0;
-    opacity: 0.9;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.3s;
+.sidenavopen {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 65px;
+  left: 0;
+  background-color: #5f9ea0;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.3s;
 }
 
 .side-nav-items {
-    text-decoration: none;
-    font-size: 15px;
-    list-style-type: none;
-    position: absolute;
-    line-height: 60px;
-    color: white;
-    cursor: pointer;
-    top: 0px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  font-size: 15px;
+  list-style-type: none;
+  position: absolute;
+  line-height: 60px;
+  color: white;
+  cursor: pointer;
+  top: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .side-nav-items a {
-    text-decoration: none;
-    color: white;
-    position: relative;
-    left: 25px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  left: 25px;
 }
 
 .savedAccountsIcon {
-    background-image: url('../icons/all-paswords-icon.svg');
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    left: 15px;
-    top: 15px;
+  background-image: url("../icons/all-paswords-icon.svg");
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  left: 15px;
+  top: 15px;
 }
 
 .addAccountIcon {
-    background-image: url('../icons/add-password-icon.svg');
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    left: 15px;
-    margin-top: 15px;
+  background-image: url("../icons/add-password-icon.svg");
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  left: 15px;
+  margin-top: 15px;
 }
 
 .passwordGeneratorIcon {
-    background-image: url('../icons/generate-password-icon.svg');
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    left: 15px;
-    margin-top: 15px;
+  background-image: url("../icons/generate-password-icon.svg");
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  left: 15px;
+  margin-top: 15px;
+}
+
+.logOutIcon {
+  background-image: url("../icons/log-out-icon.svg");
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  left: 15px;
+  margin-top: 15px;
 }
 
 /* .app-footer {
@@ -178,485 +191,520 @@
 } */
 
 .passwordGeneratorMain {
-    position: absolute;
-    border: solid;
-    border-color: #5F9EA0 ;
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-    top: 100px;
-    left: 25%;
-    bottom: 30px;
-    right: 25%;
-    user-select: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  border: solid;
+  border-color: #5f9ea0;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  top: 100px;
+  left: 25%;
+  bottom: 30px;
+  right: 25%;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .passwordLength {
-    position: absolute;
-    left: 50px;
-    top: 15px;
+  position: absolute;
+  left: 50px;
+  top: 15px;
 }
 
 .passwordLengthItems {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .passwordLengthItems li {
-   margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .passwordComplexity {
-    position: absolute;
-    right: 50px;
-    top: 15px;
+  position: absolute;
+  right: 50px;
+  top: 15px;
 }
 
 .passwordComplexityItems {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .passwordComplexityItems li {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .generatedPasswordSpan {
-    position: absolute;
-    top: 275px;
-    left: 35%;
-    border-bottom: solid;
-    border-width: thin;
-    width: 200px;
-    text-align: center;
-    height: 25px;
+  position: absolute;
+  top: 275px;
+  left: 35%;
+  border-bottom: solid;
+  border-width: thin;
+  width: 200px;
+  text-align: center;
+  height: 25px;
 }
 
 .generatedPasswordPlaceholder {
-    position: absolute;
-    top: 275px;
-    left: 35%;
-    border-bottom: solid;
-    border-width: thin;
-    width: 200px;
-    text-align: center;
-    height: 25px;
-    color: gray;
-    font-size: 20px;
+  position: absolute;
+  top: 275px;
+  left: 35%;
+  border-bottom: solid;
+  border-width: thin;
+  width: 200px;
+  text-align: center;
+  height: 25px;
+  color: gray;
+  font-size: 20px;
 }
 
 .copyGeneratedPasswordButton {
-    position: absolute;
-    top: 400px;
-    left: 40%;
-    width: 130px;
-    height: 55px;
-    border: none;
-    border-radius: 7px;
-    background-color: #5F9EA0;
-    color: white;
-    font-size: 15px;
-    text-align: center;
+  position: absolute;
+  top: 400px;
+  left: 40%;
+  width: 130px;
+  height: 55px;
+  border: none;
+  border-radius: 7px;
+  background-color: #5f9ea0;
+  color: white;
+  font-size: 15px;
+  text-align: center;
 }
 
 .copyGeneratedPasswordButton:hover {
-    background-color: #589496;
-    cursor: pointer;
+  background-color: #589496;
+  cursor: pointer;
 }
 
 .addAccountMain {
-    position: absolute;
-    border: solid;
-    border-color: #5F9EA0 ;
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-    top: 100px;
-    left: 25%;
-    bottom: 30px;
-    right: 25%;
-    user-select: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  border: solid;
+  border-color: #5f9ea0;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  top: 100px;
+  left: 25%;
+  bottom: 30px;
+  right: 25%;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .urlList {
-    position: absolute;
-    left: 50px;
-    top: 15px;
+  left: 50px;
+  top: 15px;
 }
 
 .urlListSpan {
-    position: absolute;
-    top:10px;
 }
 
 .urlListInput {
-    position: absolute;
-    top: 30px;
-    width: 450px;
-    height: 30px;
-    font-size: 17px;
-    border: none;
-    border-bottom: solid;
-    border-width: thin;
-    border-color: gray;
-    font-weight: lighter;
+  width: auto;
+  height: 30px;
+  font-size: 17px;
+  border: none;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: gray;
+  font-weight: lighter;
 }
 
 .urlListInput:focus {
-    outline: none;
+  outline: none;
 }
 
 .urlName {
-    position: absolute;
-    margin-top: 100px ;
 }
 
 .urlNameInput {
-    position: absolute;
-    top: 125px;
-    width: 450px;
-    height: 30px;
-    font-size: 17px;
-    border: none;
-    border-bottom: solid;
-    border-width: thin;
-    border-color: gray;
-    font-weight: lighter;
+  height: 30px;
+  font-size: 17px;
+  border: none;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: gray;
+  font-weight: lighter;
 }
 
 .urlNameInput:focus {
-    outline: none;
+  outline: none;
 }
 
 .loginInfoBox {
-    position: absolute;
-    display: block;
-    left: 50px;
-    top: 50px;
+  display: contents;
+  left: 50px;
+  top: 50px;
+  width: fit-content;
 }
 
 .userName {
-    position: absolute;
-    top: 150px;
+  width: auto;
 }
 
 .userNameInput {
-    position: absolute;
-    top: 180px;
-    width: 450px;
-    height: 30px;
-    font-size: 17px;
-    border: none;
-    border-bottom: solid;
-    border-width: thin;
-    border-color: gray;
-    font-weight: lighter;
+  width: fit-content;
+  height: 30px;
+  font-size: 17px;
+  border: none;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: gray;
+  font-weight: lighter;
 }
 
 .userNameInput:focus {
-    outline: none;
+  outline: none;
 }
 
 .password {
-    position: absolute;
-    top: 240px;
 }
 
 .passwordInput {
-    position: absolute;
-    top: 270px;
-    width: 450px;
-    height: 30px;
-    font-size: 17px;
-    border: none;
-    border-bottom: solid;
-    border-width: thin;
-    border-color: gray;
-    font-weight: lighter;
+  width: fit-content;
+  height: 30px;
+  font-size: 17px;
+  border: none;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: gray;
+  font-weight: lighter;
 }
 
 .passwordInput:focus {
-    outline: none;
+  outline: none;
 }
 
 .clearButton {
-    position: absolute;
-    bottom: 70px;
-    right: 260px;
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 7px;
-    background-color: #5F9EA0;
-    color: white;
-    font-size: 15px;
-    text-align: center;
+  position: absolute;
+  bottom: 70px;
+  right: 260px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: #5f9ea0;
+  color: white;
+  font-size: 15px;
+  text-align: center;
 }
 
 .clearButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .saveButton {
-    position: absolute;
-    bottom: 70px;
-    right: 130px;
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 7px;
-    background-color: #5F9EA0;
-    color: white;
-    font-size: 15px;
-    text-align: center;
+  position: absolute;
+  bottom: 70px;
+  right: 130px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: #5f9ea0;
+  color: white;
+  font-size: 15px;
+  text-align: center;
 }
 
 .saveButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .passwordShow {
-    background-image: url('../icons/hide-password-icon.svg');
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 275px;
-    width: 20px;
-    height: 20px;
-    left: 425px;
-    cursor: pointer;
-    user-select: none;
+  background-image: url("../icons/hide-password-icon.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .active {
-    background-image: url('../icons/show-password-icon.svg');
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 275px;
-    width: 20px;
-    height: 20px;
-    left: 425px;
-    cursor: pointer;
-    user-select: none;
+  background-image: url("../icons/show-password-icon.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 275px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .profilePageMain {
-    position: absolute;
-    border: solid;
-    border-color: #5F9EA0 ;
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-    top: 100px;
-    left: 25%;
-    bottom: 30px;
-    right: 25%;
-    user-select: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  border: solid;
+  border-color: #5f9ea0;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  top: 100px;
+  left: 25%;
+  bottom: 30px;
+  right: 25%;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .profilePageInfo {
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    left: 40px;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  left: 40px;
 }
 
 .profilePageIcon {
-   background-image: url('../icons/user-icon.svg');
-   position: absolute;
-   width: 50px;
-   height: 50px;
-   left: 65px;
-   top: 60px;
-   background-color: #5F9EA0;
-   border-radius: 50%;
+  background-image: url("../icons/user-icon.svg");
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 65px;
+  top: 60px;
+  background-color: #5f9ea0;
+  border-radius: 50%;
 }
 
 .userNameInfo {
-    position: absolute;
-    left: 150px;
-    top: 50px;
+  position: absolute;
+  left: 150px;
+  top: 50px;
 }
 
 .changeUserName {
-    position: absolute;
-    left: 150px;
-    top: 85px;
-    width: 300px;
-    height: 30px;
-    font-size: 17px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: lighter;
-    border: none;
-    border-bottom: solid;
-    border-color: gray;
-    border-width: thin;
+  position: absolute;
+  left: 150px;
+  top: 85px;
+  width: 300px;
+  height: 30px;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  border: none;
+  border-bottom: solid;
+  border-color: gray;
+  border-width: thin;
 }
 
 .changeUserName:focus {
-    outline: none;
+  outline: none;
 }
 
 .emailInfo {
-    position: absolute;
-    left: 150px;
-    top: 150px;
+  position: absolute;
+  left: 150px;
+  top: 150px;
 }
 
 .changeMail {
-    position: absolute;
-    left: 150px;
-    top: 185px;
-    width: 300px;
-    height: 30px;
-    font-size: 17px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: lighter;
-    border: none;
-    border-bottom: solid;
-    border-color: gray;
-    border-width: thin;
+  position: absolute;
+  left: 150px;
+  top: 185px;
+  width: 300px;
+  height: 30px;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  border: none;
+  border-bottom: solid;
+  border-color: gray;
+  border-width: thin;
 }
 
 .changeMail:focus {
-    outline: none;
+  outline: none;
 }
 
 .passwordInfo {
-    position: absolute;
-    left: 150px;
-    top: 250px;
+  position: absolute;
+  left: 150px;
+  top: 250px;
 }
 
 .changePassword {
-    position: absolute;
-    left: 150px;
-    top: 285px;
-    width: 300px;
-    height: 30px;
-    font-size: 17px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: lighter;
-    border: none;
-    border-bottom: solid;
-    border-color: gray;
-    border-width: thin;
+  position: absolute;
+  left: 150px;
+  top: 285px;
+  width: 300px;
+  height: 30px;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  border: none;
+  border-bottom: solid;
+  border-color: gray;
+  border-width: thin;
 }
 
 .cancelChangesButton {
-    position: absolute;
-    top: 385px;
-    left: 190px;
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 7px;
-    background-color: #5F9EA0;
-    color: white;
-    font-size: 15px;
-    text-align: center;
+  position: absolute;
+  top: 385px;
+  left: 190px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: #5f9ea0;
+  color: white;
+  font-size: 15px;
+  text-align: center;
 }
 
 .cancelChangesButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .saveChangesButton {
-    position: absolute;
-    top: 385px;
-    left: 310px;
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 7px;
-    background-color: #5F9EA0;
-    color: white;
-    font-size: 15px;
-    text-align: center;
+  position: absolute;
+  top: 385px;
+  left: 310px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: #5f9ea0;
+  color: white;
+  font-size: 15px;
+  text-align: center;
 }
 
 .saveChangesButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .blurredProfilePage {
-    filter: blur(2px);
+  filter: blur(2px);
 }
 
 .savedPopup {
-    position: absolute;
-    border: solid;
-    border-color: #5F9EA0 ;
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-    top: 100px;
-    left: 10px;
-    bottom: 200px;
-    right: 10px;
-    user-select: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: white;
+  position: absolute;
+  border: solid;
+  border-color: #5f9ea0;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  top: 100px;
+  left: 10px;
+  bottom: 200px;
+  right: 10px;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: white;
 }
 
 .closePopupButton {
-    background-image: url('../icons/close-icon.svg');
-    background-repeat: no-repeat;
-    background-color: transparent;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    border: none;
+  background-image: url("../icons/close-icon.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  border: none;
 }
 
 .savedHeader {
-    position: absolute;
-    left: 25%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  left: 25%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .progressBar {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #5F9EA0;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear;
-    animation-iteration-count: 1;
-    position: absolute;
-    left: 45%;
-    top: 40%;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #5f9ea0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear;
+  animation-iteration-count: 1;
+  position: absolute;
+  left: 45%;
+  top: 40%;
 }
 
 @keyframes spin {
-    from { 
-        transform: rotate(0deg);
-
-    }
-    to { 
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .saved {
-    border: 5px solid #5F9EA0;
+  border: 5px solid #5f9ea0;
 }
 
-.saved a{
-    position: absolute;
-    background-image: url('../icons/saved-icon.svg');
-    background-repeat: no-repeat;
-    width: 35px;
-    height: 35px;
-    top: 7px;
-    left: 7px;
+.saved a {
+  position: absolute;
+  background-image: url("../icons/saved-icon.svg");
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  top: 7px;
+  left: 7px;
 }
 
-.demo {
-    position: absolute;
-    top: 100px;
+.accountList {
+  position: absolute;
+  top: 0px;
+}
+
+.accountList > li {
+  list-style-type: none;
+}
+
+.accountList > li.selected {
+  color: #5f9ea0;
+}
+
+.allAccountsPageMain {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  position: absolute;
+  border: solid;
+  border-color: #5f9ea0;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  top: 100px;
+  left: 25%;
+  bottom: 30px;
+  right: 25%;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.allAccountsPageMain > .accountsSection {
+  flex-grow: 1;
+  flex-basis: 20%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.allAccountsPageMain > .accountInfo {
+  flex-grow: 2;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.allAccountsPageMain > .accountInfo > div {
+  display: flex;
+  justify-content: flex-start;
 }

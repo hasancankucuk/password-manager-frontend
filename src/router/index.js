@@ -5,20 +5,25 @@ import AllPasswords from '../components/pages/AllPasswords.vue'
 import PasswordGenerator from '../components/pages/PasswordGenerator.vue'
 import AddAccount from '../components/pages/AddAccount.vue'
 import ProfilePage from '../components/pages/ProfilePage.vue'
+import LoginPage from '../components/pages/Login.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-    {
+const routes = [{
         path: '/',
         name: 'Home',
         component: Home
     },
     {
+        path: '/login',
+        name: 'LoginPage',
+        component: LoginPage
+    },
+    {
         path: '/all-passwords',
         name: 'AllPasswords',
         component: AllPasswords
-    }, 
+    },
     {
         path: '/password-generator',
         name: 'PasswordGenerator',

@@ -1,43 +1,125 @@
 <template>
-    <div >
-        <ul class="demo" >
-            <li v-for="value in object" :key="value.savedUsername"> 
-                {{ value.savedUsername }}
-            </li>
-        </ul>
+  <div class="allAccountsPageMain">
+    <div class="accountsSection">
+      <ul class="accountList">
+        <h4>Accounts</h4>
+        <li
+          v-for="value in accounts"
+          :key="value.savedUsername"
+          @click="setSelected(value)"
+          :class="{ selected: value.selected }"
+        >
+          {{ value.savedUsername }}
+        </li>
+      </ul>
     </div>
+    <div class="accountInfo">
+      <div>
+        <span class="urlListSpan">URL:</span>
+        <input
+          class="urlListInput"
+          type="url"
+          v-model="saveAccountInfoModel.savedUrl"
+        />
+      </div>
+      <div>
+        <span class="userName">Username:</span>
+        <input
+          class="userNameInput"
+          type="email"
+          v-model="saveAccountInfoModel.savedUsername"
+        />
+      </div>
+      <div>
+        <span class="password">Password:</span>
+        <input
+          class="passwordInput"
+          :type="type"
+          v-model="saveAccountInfoModel.savedPassword"
+        />
+        <a
+          class="passwordShow"
+          @click="showPassword()"
+          :class="{ active: isActive }"
+        />
+      </div>
+      <div>
+        <button class="clearButton" @click="clearInfo()">Clear</button>
+        <button class="saveButton" @click="updateInfo()">Update</button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import saveAccountInfoModel from "../../models/saveAccountInfoModel";
+
+import userInfoService from "../../services/userInfoService";
 
 export default {
-    name: 'AllPasswords',
-    data() {
-        return {
-            object: []
-        }
+  name: "AllPasswords",
+  data() {
+    return {
+      accounts: [],
+      saveAccountInfoModel: new saveAccountInfoModel(),
+      userService: new userInfoService(),
+      type: "password",
+      isActive: false,
+    };
+  },
+  methods: {
+    clearInfo() {
+      this.saveAccountInfoModel = new saveAccountInfoModel();
+      this.accounts.forEach((x) => (x.selected = false));
     },
-    mounted () {
-        var axios = require('axios');
-        var data = '';
-        var config = {
-            method: 'get',
-        url: 'https://192.168.0.28:5001/api/SaveAccountInfo',
-        headers: { },
-        data : data
-        };
-        axios(config).then((response) =>{
-            console.log(response.data)
-            response.data.forEach(element => {
-                this.object.push(element);
-                this.email = element.savedUsername;
-                this.password = element.savedPassword;
-                this.url = element.savedUrl;
-                // console.log(this.object)
-            });
-        }).catch(function (error) {
-            console.log(error);
+    setSelected(info) {
+      this.accounts.forEach((x) => (x.selected = false));
+      info.selected = true;
+      this.saveAccountInfoModel = new saveAccountInfoModel();
+      this.setModel(info);
+      this.saveAccountInfoModel.selected = info.selected;
+    },
+    showPassword() {
+      if (this.type == "password") {
+        this.type = "text";
+      } else {
+        this.type = "password";
+      }
+      return (this.isActive = !this.isActive);
+    },
+    updateInfo() {
+      this.setModel(this.saveAccountInfoModel);
+      this.userService
+        .updateAccountInfo(this.saveAccountInfoModel)
+        .then(() => {
+          this.getAccounts();
+          this.clearInfo();
+        })
+        .catch((err) => {
+          console.log(err);
         });
-    }
-}
+    },
+    setModel(info) {
+      this.saveAccountInfoModel = new saveAccountInfoModel();
+      this.saveAccountInfoModel.id = info.id;
+      this.saveAccountInfoModel.savedUsername = info.savedUsername;
+      this.saveAccountInfoModel.savedUrl = info.savedUrl;
+      this.saveAccountInfoModel.savedPassword = info.savedPassword;
+    },
+    getAccounts() {
+      this.userService
+        .getAllPasswords(localStorage.getItem("token"))
+        .then((response) => {
+          this.accounts = response.data ? response.data : [];
+          this.accounts.forEach((x) => (x.selected = false));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
+  mounted() {
+    this.getAccounts();
+  },
+};
 </script>
