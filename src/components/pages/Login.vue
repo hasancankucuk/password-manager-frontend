@@ -64,11 +64,14 @@ export default {
 
       this.userService
         .sendSignupRequest(this.userModel)
-        .then(() => {
+        .then((response) => {
+          this.userModel = response.data;
           this.isLoginStarted = false;
           this.isLogged = true;
           this.$store.dispatch("LOGIN_USER");
           localStorage.setItem("token", this.userModel.userEmail);
+          localStorage.setItem("username", this.userModel.userName);
+          localStorage.setItem("tokenId", this.userModel.id);
           router.push("/all-passwords");
         })
         .catch((err) => {
@@ -84,11 +87,13 @@ export default {
       this.userModel.userEmail = this.userModel.userName;
       this.userService
         .sendLoginRequest(this.userModel)
-        .then(() => {
+        .then((response) => {
           this.isLoginStarted = false;
           this.isLogged = true;
           this.$store.commit("LOGIN_USER");
           localStorage.setItem("token", this.userModel.userEmail);
+          localStorage.setItem("username", this.userModel.userName);
+          localStorage.setItem("tokenId", response.data);
           router.push("/profile");
         })
         .catch(() => {

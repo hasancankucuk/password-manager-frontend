@@ -1,10 +1,12 @@
 export default class UserInfoService {
     axios = require("axios");
     apiPath = "https://localhost:5001/api/";
+
+// #region UserInfoModel
     sendLoginRequest(model) {
         var config = {
             method: "POST",
-            url: "https://localhost:5001/api/userinfo/login",
+            url: `${this.apiPath}userinfo/login`,
             headers: {},
             data: model,
         };
@@ -14,17 +16,38 @@ export default class UserInfoService {
     sendSignupRequest(model) {
         var config = {
             method: "POST",
-            url: "https://localhost:5001/api/userinfo/signup",
+            url: `${this.apiPath}userinfo/signup`,
             headers: {},
             data: model,
         };
         return this.axios(config);
     }
 
+    updateUser(model) {
+        var config = {
+            method: "PUT",
+            url: `${this.apiPath}userinfo/${model.id}`,
+            header: {},
+            data: model
+        };
+        return this.axios(config);
+    }
+
+    deleteUser(userId) {
+        var config = {
+            method: "DELETE",
+            url: `${this.apiPath}userinfo/${userId}`,
+            header: {}
+        };
+        return this.axios(config);
+    }
+// #endregion
+
+// #region SaveAccountInfo
     getAllPasswords(userName) {
         var config = {
             method: "GET",
-            url: "https://localhost:5001/api/SaveAccountInfo",
+            url: `${this.apiPath}SaveAccountInfo/allAccounts/${localStorage.getItem('tokenId')}`,
             headers: {},
             data: userName
         };
@@ -34,7 +57,7 @@ export default class UserInfoService {
     saveAccount(model) {
         var config = {
             method: "POST",
-            url: "https://localhost:5001/api/SaveAccountInfo",
+            url: `${this.apiPath}SaveAccountInfo`,
             headers: {},
             data: model,
         };
@@ -44,10 +67,11 @@ export default class UserInfoService {
     updateAccountInfo(model) {
         var config = {
             method: "PUT",
-            url: `https://localhost:5001/api/SaveAccountInfo/${model.id}`,
+            url: `${this.apiPath}SaveAccountInfo/${model.id}`,
             headers: {},
             data: model,
         };
         return this.axios(config);
     }
+// #endregion
 }

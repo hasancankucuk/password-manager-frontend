@@ -54,6 +54,8 @@ export default {
       this.saveAccountInfoModel = new saveAccountInfoModel();
     },
     saveAccount() {
+      this.saveAccountInfoModel.userInfoModelId =
+        localStorage.getItem("tokenId");
       this.userInfoService
         .saveAccount(this.saveAccountInfoModel)
         .then(() => {
