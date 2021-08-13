@@ -57,7 +57,7 @@ export default {
       this.userInfoService
         .saveAccount(this.saveAccountInfoModel)
         .then(() => {
-          this.$router.push({ path: "/all-passwords" });
+          this.$router.push("all-passwords");
         })
         .catch((err) => {
           console.log(err);

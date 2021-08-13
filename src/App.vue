@@ -28,7 +28,7 @@ export default {
       if (!router.currentRoute.path.startsWith("/login")) router.push("login");
     } else {
       this.$store.commit("LOGIN_USER");
-      if (!router.currentRoute.path.startsWith("/all-passwords"))
+      if (router.currentRoute.path.startsWith("/login") || router.currentRoute.path.trim().length == 0)
         router.push("all-passwords");
     }
   },
