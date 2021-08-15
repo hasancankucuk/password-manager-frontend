@@ -280,16 +280,14 @@
 }
 
 .addAccountMain {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
   border: solid;
   border-color: #5f9ea0;
   border-radius: 10px;
   width: auto;
   height: auto;
-  top: 100px;
-  left: 25%;
-  bottom: 30px;
-  right: 25%;
   user-select: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -318,9 +316,6 @@
   outline: none;
 }
 
-.urlName {
-}
-
 .urlNameInput {
   height: 30px;
   font-size: 17px;
@@ -336,10 +331,21 @@
 }
 
 .loginInfoBox {
-  display: contents;
-  left: 50px;
-  top: 50px;
-  width: fit-content;
+  flex-grow: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: auto
+}
+
+.buttonGroup {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: auto;
 }
 
 .userName {
@@ -379,10 +385,10 @@
   outline: none;
 }
 
-.clearButton {
-  position: absolute;
+.generalButton {
+  /* position: absolute;
   bottom: 70px;
-  right: 260px;
+  right: 260px; */
   width: 100px;
   height: 40px;
   border: none;
@@ -418,17 +424,17 @@
 .passwordShow {
   background-image: url("../icons/hide-password-icon.svg");
   background-repeat: no-repeat;
+  position: absolute;
   width: 20px;
   height: 20px;
   cursor: pointer;
   user-select: none;
 }
 
-.active {
+.passwordShow.active {
   background-image: url("../icons/show-password-icon.svg");
   background-repeat: no-repeat;
   position: absolute;
-  top: 275px;
   width: 20px;
   height: 20px;
   cursor: pointer;

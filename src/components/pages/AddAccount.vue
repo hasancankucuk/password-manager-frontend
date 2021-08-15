@@ -1,25 +1,26 @@
 <template>
   <div>
     <div class="addAccountMain">
-      <div class="urlList">
-        <span class="urlListSpan">URL:</span>
+      <div class="loginInfoBox">
+        <div>
         <input
-          class="urlListInput"
-          type="url"
+          placeholder="URL"
+          class="userNameInput"
+          type="email"
           v-model="saveAccountInfoModel.savedUrl"
         />
-        <!-- <span class="urlName">Name:</span>
-            <input class="urlNameInput" type="text" v-model="saveAccountInfoModel.savedUrl"> -->
-      </div>
-      <div class="loginInfoBox">
-        <span class="userName">Username:</span>
+        </div>
+        <div>
         <input
+          placeholder="Username"
           class="userNameInput"
           type="email"
           v-model="saveAccountInfoModel.savedUsername"
         />
-        <span class="password">Password:</span>
+        </div>
+        <div>
         <input
+          placeholder="Password"
           class="passwordInput"
           :type="type"
           v-model="saveAccountInfoModel.savedPassword"
@@ -29,9 +30,12 @@
           @click="showPassword()"
           :class="{ active: isActive }"
         />
+        </div>
       </div>
-      <button class="clearButton" @click="clearInfo()">Clear</button>
-      <button class="saveButton" @click="saveAccount()">Save</button>
+      <div class="buttonGroup">
+        <button class="generalButton" @click="clearInfo()">Clear</button>
+        <button class="generalButton" @click="saveAccount()">Save</button>
+      </div>
     </div>
   </div>
 </template>

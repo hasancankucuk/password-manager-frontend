@@ -13,39 +13,25 @@
         </li>
       </ul>
     </div>
-    <div class="accountInfo">
-      <div>
-        <span class="urlListSpan">URL:</span>
-        <input
-          class="urlListInput"
-          type="url"
-          v-model="saveAccountInfoModel.savedUrl"
-        />
+    <div class="addAccountMain">
+      <div class="loginInfoBox">
+        <div>
+          <input placeholder="URL" type="email" class="userNameInput" />
+        </div>
+        <div>
+          <input placeholder="Username" type="email" class="userNameInput" />
+        </div>
+        <div>
+          <input
+            placeholder="Password"
+            type="password"
+            class="passwordInput"
+          /><a class="passwordShow"></a>
+        </div>
       </div>
-      <div>
-        <span class="userName">Username:</span>
-        <input
-          class="userNameInput"
-          type="email"
-          v-model="saveAccountInfoModel.savedUsername"
-        />
-      </div>
-      <div>
-        <span class="password">Password:</span>
-        <input
-          class="passwordInput"
-          :type="type"
-          v-model="saveAccountInfoModel.savedPassword"
-        />
-        <a
-          class="passwordShow"
-          @click="showPassword()"
-          :class="{ active: isActive }"
-        />
-      </div>
-      <div>
-        <button class="clearButton" @click="clearInfo()">Clear</button>
-        <button class="saveButton" @click="updateInfo()">Update</button>
+      <div class="buttonGroup">
+        <button class="generalButton">Clear</button
+        ><button class="generalButton">Save</button>
       </div>
     </div>
   </div>
