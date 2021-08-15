@@ -46,9 +46,11 @@
         </div>
       </div>
       <div class="buttonGroup">
-        <button class="generalDeleteButton">Delete</button>
-        <button class="generalButton">Clear</button>
-        <button class="generalButton">Update</button>
+        <button :disabled="isNoneSelected" @click="deleteInfo()" class="generalDeleteButton">
+          Delete
+        </button>
+        <button :disabled="isNoneSelected" class="generalButton" @click="clearInfo()">Clear</button>
+        <button :disabled="isNoneSelected" class="generalButton" @click="updateInfo()">Update</button>
       </div>
     </div>
   </div>
@@ -63,6 +65,7 @@ export default {
   name: "AllPasswords",
   data() {
     return {
+      isNoneSelected: true,
       accounts: [],
       saveAccountInfoModel: new saveAccountInfoModel(),
       userService: new userInfoService(),
@@ -71,7 +74,20 @@ export default {
     };
   },
   methods: {
+    deleteInfo() {
+      this.isNoneSelected = true;
+      this.userService
+        .deleteAccountInfo(this.saveAccountInfoModel.id)
+        .then(() => {
+          this.getAccounts();
+          this.clearInfo();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
     clearInfo() {
+      this.isNoneSelected = true;
       this.saveAccountInfoModel = new saveAccountInfoModel();
       this.accounts.forEach((x) => (x.selected = false));
     },
@@ -95,6 +111,7 @@ export default {
         });
     },
     setModel(info) {
+      this.isNoneSelected = false;
       this.saveAccountInfoModel = new saveAccountInfoModel();
       this.saveAccountInfoModel.id = info.id;
       this.saveAccountInfoModel.savedUsername = info.savedUsername;
@@ -105,6 +122,7 @@ export default {
       this.userService
         .getAllPasswords(localStorage.getItem("token"))
         .then((response) => {
+          this.isNoneSelected = true;
           this.accounts = response.data ? response.data : [];
           this.accounts.forEach((x) => (x.selected = false));
         })
@@ -121,7 +139,10 @@ export default {
       return (this.isActive = !this.isActive);
     },
     copyPassword() {
-      this.userService.recentlyUsedPassword(this.saveAccountInfoModel.id).then().catch();
+      this.userService
+        .recentlyUsedPassword(this.saveAccountInfoModel.id)
+        .then()
+        .catch();
       if (!this.saveAccountInfoModel.savedPassword) {
         this.saveAccountInfoModel.savedPassword = "";
         return;

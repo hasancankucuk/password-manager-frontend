@@ -99,9 +99,10 @@ export default {
           this.isLoginStarted = false;
           this.isLogged = true;
           this.$store.commit("LOGIN_USER");
-          localStorage.setItem("token", this.userModel.userEmail);
-          localStorage.setItem("username", this.userModel.userName);
-          localStorage.setItem("tokenId", response.data);
+          console.log(response.data);
+          localStorage.setItem("token", response.data.userEmail);
+          localStorage.setItem("username", response.data.userName);
+          localStorage.setItem("tokenId", response.data.id);
           router.push("/profile");
         })
         .catch(() => {

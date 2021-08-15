@@ -4,6 +4,10 @@ export default class UserInfoService {
 
     // #region UserInfoModel
     sendLoginRequest(model) {
+        if (!model) {
+            return;
+        }
+
         var config = {
             method: "POST",
             url: `${this.apiPath}userinfo/login`,
@@ -14,6 +18,10 @@ export default class UserInfoService {
     }
 
     sendSignupRequest(model) {
+        if (!model) {
+            return;
+        }
+
         var config = {
             method: "POST",
             url: `${this.apiPath}userinfo/signup`,
@@ -24,6 +32,10 @@ export default class UserInfoService {
     }
 
     updateUser(model) {
+        if (!model) {
+            return;
+        }
+
         var config = {
             method: "PUT",
             url: `${this.apiPath}userinfo/${model.id}`,
@@ -34,6 +46,10 @@ export default class UserInfoService {
     }
 
     deleteUser(userId) {
+        if (!userId) {
+            return;
+        }
+
         var config = {
             method: "DELETE",
             url: `${this.apiPath}userinfo/${userId}`,
@@ -45,6 +61,10 @@ export default class UserInfoService {
 
     // #region SaveAccountInfo
     getAllPasswords(userName) {
+        if (!userName) {
+            return;
+        }
+
         var config = {
             method: "GET",
             url: `${this.apiPath}SaveAccountInfo/allAccounts/${localStorage.getItem('tokenId')}`,
@@ -55,6 +75,10 @@ export default class UserInfoService {
     }
 
     saveAccount(model) {
+        if (!model) {
+            return;
+        }
+
         var config = {
             method: "POST",
             url: `${this.apiPath}SaveAccountInfo`,
@@ -65,6 +89,10 @@ export default class UserInfoService {
     }
 
     updateAccountInfo(model) {
+        if (!model) {
+            return;
+        }
+
         var config = {
             method: "PUT",
             url: `${this.apiPath}SaveAccountInfo/${model.id}`,
@@ -73,9 +101,22 @@ export default class UserInfoService {
         };
         return this.axios(config);
     }
+
+    deleteAccountInfo(id) {
+        if (!id) {
+            return;
+        }
+
+        var config = {
+            method: "DELETE",
+            url: `${this.apiPath}SaveAccountInfo/${id}`,
+            headers: {},
+        };
+        return this.axios(config);
+    }
     // #endregion
 
-    // #region RecentylUsedPassword
+    // #region RecentlyUsedPassword
     getRecentlyUsedPasswords(userId) {
         if (!userId) {
             return;

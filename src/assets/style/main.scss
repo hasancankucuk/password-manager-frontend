@@ -428,6 +428,10 @@
   text-align: center;
 }
 
+.generalButton:disabled {
+  background-color: gray;
+}
+
 .generalDeleteButton {
   /* position: absolute;
   bottom: 70px;
@@ -440,6 +444,10 @@
   color: white;
   font-size: 15px;
   text-align: center;
+}
+
+.generalDeleteButton:disabled {
+  background-color: gray;
 }
 
 .clearButton:hover {
