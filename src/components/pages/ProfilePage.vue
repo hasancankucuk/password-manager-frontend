@@ -30,11 +30,8 @@
           Update
         </button>
       </div>
-      <!-- <div
-        class="profilePageInfo"
-        :class="{ blurredProfilePage: isSaved }"
-      ></div> -->
     </div>
+    <div class="profilePageInfo" :class="{ blurredProfilePage: isSaved }"></div>
     <div class="savedPopup" v-show="isSaved">
       <button class="closePopupButton" @click="closePopup()"></button>
       <h4 class="savedHeader">Changes Have Been Saved Succesfully</h4>
@@ -58,6 +55,7 @@ export default {
     };
   },
   mounted() {
+    this.userInfoModel = new userInfoModel();
     this.userInfoModel.userName = localStorage.getItem("username");
     this.userInfoModel.userEmail = localStorage.getItem("token");
     this.userInfoModel.id = localStorage.getItem("tokenId");
@@ -65,6 +63,7 @@ export default {
   },
   methods: {
     resetChanges() {
+    this.userInfoModel = new userInfoModel();
       this.userInfoModel.userName = localStorage.getItem("username");
       this.userInfoModel.userEmail = localStorage.getItem("token");
       this.userInfoModel.id = localStorage.getItem("tokenId");

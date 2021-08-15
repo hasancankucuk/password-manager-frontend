@@ -1,24 +1,32 @@
 <template>
-  <div class="profilePageMain">
-    <div
-      class="profilePageInfo"
-      :class="{ blurredProfilePage: isLoginStarted }"
-    >
-      <a class="profilePageIcon" />
-      <span class="userNameInfo">User Name</span>
-      <input class="changeUserName" type="email" v-model="userModel.userName" />
-      <span class="passwordInfo">Password</span>
-      <input
-        class="changePassword"
-        type="password"
-        v-model="userModel.userPassword"
-      />
-      <button class="cancelChangesButton" type="submit" @click="signUp()">
-        Sign Up
-      </button>
-      <button class="saveChangesButton" type="submit" @click="login()">
-        Login
-      </button>
+  <div>
+    <div class="profilePageMain">
+      <div
+        class="profilePageInfo"
+        v-show="isLoginStarted"
+        :class="{ blurredProfilePage: isLoginStarted }"
+      ></div>
+      <div class="profilePageIcon"></div>
+      <div class="profileInfo">
+        <input
+          type="email"
+          placeholder="Username or E-mail"
+          v-model="userModel.userName"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          v-model="userModel.userPassword"
+        />
+      </div>
+      <div class="buttonGroup">
+        <button class="generalButton" type="submit" @click="signUp()">
+          Sign Up
+        </button>
+        <button class="generalButton" type="submit" @click="login()">
+          Login
+        </button>
+      </div>
     </div>
     <div class="savedPopup" v-show="isLoginStarted">
       <div class="progressBar" :class="{ saved: isLoginStarted }">

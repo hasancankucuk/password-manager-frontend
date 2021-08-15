@@ -15,7 +15,10 @@
         v-show="opened"
       >
         <ul class="side-nav-items" @click="opened = !opened">
-          <li @click="redirect('/all-passwords')" class="side-nav-savedAccounts">
+          <li
+            @click="redirect('/all-passwords')"
+            class="side-nav-savedAccounts"
+          >
             <div class="savedAccountsIcon" />
             <router-link to="/all-passwords"> Accounts </router-link>
           </li>
@@ -23,13 +26,19 @@
             <div class="addAccountIcon" />
             <router-link to="/add-account"> New Account </router-link>
           </li>
-          <li @click="redirect('/recently-used-passwords')" class="side-nav-addAccount">
+          <li
+            @click="redirect('/recently-used-passwords')"
+            class="side-nav-addAccount"
+          >
             <div class="recentlyUsedIcon" />
             <router-link to="/recently-used-passwords">
               Recently Used Passwords
             </router-link>
           </li>
-          <li @click="redirect('/password-generator')" class="side-nav-passwordGenerator">
+          <li
+            @click="redirect('/password-generator')"
+            class="side-nav-passwordGenerator"
+          >
             <div class="passwordGeneratorIcon" />
             <router-link to="/password-generator"> Generator </router-link>
           </li>
@@ -80,14 +89,16 @@ export default {
     logOut() {
       this.$store.commit("LOGIN_USER");
       localStorage.removeItem("token");
+      localStorage.removeItem("username");
+      localStorage.removeItem("tokenId");
       router.push("login");
     },
     hide() {
       this.opened = false;
     },
     redirect(path) {
-      this.$router.push(path);
-    }
+      if (this.$route.path != path) this.$router.push(path);
+    },
   },
   directives: {
     ClickOutside,
