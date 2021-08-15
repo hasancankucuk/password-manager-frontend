@@ -2,7 +2,7 @@
   <div class="allAccountsPageMain">
     <div class="accountsSection">
       <ul class="accountList">
-        <h4>Accounts</h4>
+        <h4>Recently</h4>
         <li
           v-for="value in accounts"
           :key="value.savedUsername"
@@ -45,11 +45,6 @@
           <a class="copyPassword" @click="copyPassword()"></a>
         </div>
       </div>
-      <div class="buttonGroup">
-        <button class="generalDeleteButton">Delete</button>
-        <button class="generalButton">Clear</button>
-        <button class="generalButton">Update</button>
-      </div>
     </div>
   </div>
 </template>
@@ -60,7 +55,7 @@ import saveAccountInfoModel from "../../models/saveAccountInfoModel";
 import userInfoService from "../../services/userInfoService";
 
 export default {
-  name: "AllPasswords",
+  name: "RecentlyUsedPasswords",
   data() {
     return {
       accounts: [],
@@ -103,7 +98,7 @@ export default {
     },
     getAccounts() {
       this.userService
-        .getAllPasswords(localStorage.getItem("token"))
+        .getRecentlyUsedPasswords(localStorage.getItem("tokenId"))
         .then((response) => {
           this.accounts = response.data ? response.data : [];
           this.accounts.forEach((x) => (x.selected = false));
@@ -121,7 +116,10 @@ export default {
       return (this.isActive = !this.isActive);
     },
     copyPassword() {
-      this.userService.recentlyUsedPassword(this.saveAccountInfoModel.id).then().catch();
+      this.userService
+        .recentlyUsedPassword(this.saveAccountInfoModel.id)
+        .then()
+        .catch();
       if (!this.saveAccountInfoModel.savedPassword) {
         this.saveAccountInfoModel.savedPassword = "";
         return;

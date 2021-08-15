@@ -2,7 +2,7 @@ export default class UserInfoService {
     axios = require("axios");
     apiPath = "https://localhost:5001/api/";
 
-// #region UserInfoModel
+    // #region UserInfoModel
     sendLoginRequest(model) {
         var config = {
             method: "POST",
@@ -41,9 +41,9 @@ export default class UserInfoService {
         };
         return this.axios(config);
     }
-// #endregion
+    // #endregion
 
-// #region SaveAccountInfo
+    // #region SaveAccountInfo
     getAllPasswords(userName) {
         var config = {
             method: "GET",
@@ -73,5 +73,34 @@ export default class UserInfoService {
         };
         return this.axios(config);
     }
-// #endregion
+    // #endregion
+
+    // #region RecentylUsedPassword
+    getRecentlyUsedPasswords(userId) {
+        if (!userId) {
+            return;
+        }
+
+        var config = {
+            method: "GET",
+            url: `${this.apiPath}SaveAccountInfo/recentlyUsedPasswords/${userId}`,
+            headers: {},
+        };
+        return this.axios(config);
+    }
+
+    recentlyUsedPassword(recentlyUsedPasswordId) {
+        if (!recentlyUsedPasswordId) {
+            return;
+        }
+
+        var config = {
+            method: "POST",
+            url: `${this.apiPath}SaveAccountInfo/recentlyUsedPassword/${recentlyUsedPasswordId}`,
+            headers: {},
+        };
+        return this.axios(config);
+    }
+    // #endregion
+
 }

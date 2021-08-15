@@ -1,34 +1,39 @@
 <template>
-  <div class="profilePageMain">
-    <div class="profilePageInfo" :class="{ blurredProfilePage: isSaved }">
-      <a class="profilePageIcon" />
-      <span class="userNameInfo">User Name</span>
-      <input
-        class="changeUserName"
-        type="email"
-        v-model="userInfoModel.userName"
-      />
-      <span class="emailInfo">E-mail</span>
-      <input
-        class="changeMail"
-        type="email"
-        v-model="userInfoModel.userEmail"
-      />
-      <span class="passwordInfo">Password</span>
-      <input
-        class="changePassword"
-        type="password"
-        v-model="userInfoModel.userPassword"
-      />
-      <button class="cancelChangesButton" type="reset" @click="resetChanges()">
-        Cancel
-      </button>
-      <button class="saveChangesButton" type="submit" @click="saveChanges()">
-        Update
-      </button>
-      <button class="deleteButton" type="submit" @click="deleteUser()">
-        Delete
-      </button>
+  <div>
+    <div class="profilePageMain">
+      <div class="profilePageIcon"></div>
+      <div class="profileInfo">
+        <input
+          type="email"
+          placeholder="User Name"
+          v-model="userInfoModel.userName"
+        />
+        <input
+          type="email"
+          placeholder="E-mail"
+          v-model="userInfoModel.userEmail"
+        />
+        <input
+          placeholder="Password"
+          type="password"
+          v-model="userInfoModel.userPassword"
+        />
+      </div>
+      <div class="buttonGroup">
+        <button class="generalDeleteButton" type="submit" @click="deleteUser()">
+          Delete
+        </button>
+        <button class="generalButton" type="reset" @click="resetChanges()">
+          Cancel
+        </button>
+        <button class="generalButton" type="submit" @click="saveChanges()">
+          Update
+        </button>
+      </div>
+      <!-- <div
+        class="profilePageInfo"
+        :class="{ blurredProfilePage: isSaved }"
+      ></div> -->
     </div>
     <div class="savedPopup" v-show="isSaved">
       <button class="closePopupButton" @click="closePopup()"></button>
@@ -57,7 +62,6 @@ export default {
     this.userInfoModel.userEmail = localStorage.getItem("token");
     this.userInfoModel.id = localStorage.getItem("tokenId");
     this.userInfoModel.userPassword = "";
-    console.log(this.userInfoModel);
   },
   methods: {
     resetChanges() {

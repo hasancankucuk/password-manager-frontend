@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../components/pages/Home.vue'
-import AllPasswords from '../components/pages/AllPasswords.vue'
-import PasswordGenerator from '../components/pages/PasswordGenerator.vue'
-import AddAccount from '../components/pages/AddAccount.vue'
-import ProfilePage from '../components/pages/ProfilePage.vue'
-import LoginPage from '../components/pages/Login.vue'
+import {
+    Home,
+    AllPasswords,
+    RecentlyUsedPasswords,
+    PasswordGenerator,
+    AddAccount,
+    ProfilePage,
+    Login
+} from '../components/pages';
 
 Vue.use(VueRouter)
 
@@ -16,13 +19,18 @@ const routes = [{
     },
     {
         path: '/login',
-        name: 'LoginPage',
-        component: LoginPage
+        name: 'Login',
+        component: Login
     },
     {
         path: '/all-passwords',
         name: 'AllPasswords',
         component: AllPasswords
+    },
+    {
+        path: '/recently-used-passwords',
+        name: 'RecentlyUsedPasswords',
+        component: RecentlyUsedPasswords
     },
     {
         path: '/password-generator',

@@ -47,5 +47,5 @@ Vue.use(VueI18n);
 new Vue({
   render: h => h(App),
   store,
-  router
+  router,
 }).$mount('#app')

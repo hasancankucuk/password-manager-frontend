@@ -3,7 +3,7 @@
     <div class="passwordLength">
       <p class="passwordLengthHeader">Select Password Length</p>
       <ul class="passwordLengthItems">
-        <li>
+        <li @click="setPassLength(8)">
           <input
             class="lengthRadio"
             type="radio"
@@ -14,7 +14,7 @@
           />
           <label class="passwordLengthLabelEight">8</label>
         </li>
-        <li>
+        <li @click="setPassLength(10)">
           <input
             class="lengthRadio"
             type="radio"
@@ -25,7 +25,7 @@
           />
           <label class="passwordLengthLabelTen">10</label>
         </li>
-        <li>
+        <li @click="setPassLength(12)">
           <input
             class="lengthRadio"
             type="radio"
@@ -83,7 +83,7 @@
         </li>
       </ul>
     </div>
-    <span class="generatedPasswordSpan">{{ generator() }}</span>
+    <span class="generatedPasswordSpan">{{ passwordString }}</span>
     <label class="generatedPasswordPlaceholder"> {{ placeholder() }} </label>
     <button class="copyGeneratedPasswordButton" type="submit" @click="copyToClipBoard()">
       Copy Password
@@ -100,9 +100,14 @@ export default {
       isNumber: true,
       isSymbol: true,
       passLength: 0,
+      passwordString: ''
     };
   },
   methods: {
+    setPassLength(length) {
+      this.passLength = length;
+      this.generator(this.passLength);
+    },
     generator(passLength) {
       var length = passLength ? passLength : 12;
       var lowerCaseString = "abcdefghijklmnopqrstuvwxyz";
@@ -139,7 +144,7 @@ export default {
           return 0.5 - Math.random();
         })
         .join("");
-      return password.substr(0, this.passLength);
+      this.passwordString = password.substr(0, this.passLength);
     },
     copyToClipBoard () {
       var generatedPassword = document.getElementsByClassName("generatedPasswordSpan")[0];

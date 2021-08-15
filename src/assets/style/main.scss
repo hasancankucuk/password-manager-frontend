@@ -140,6 +140,16 @@
   margin-top: 15px;
 }
 
+.recentlyUsedIcon {
+  background-image: url("../icons/recenlty-used-icon.svg");
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  left: 15px;
+  margin-top: 15px;
+}
+
 .passwordGeneratorIcon {
   background-image: url("../icons/generate-password-icon.svg");
   position: absolute;
@@ -282,12 +292,35 @@
 .addAccountMain {
   display: flex;
   flex-direction: column;
-  flex-grow: 3;
+  justify-content: space-around;
+  position: absolute;
   border: solid;
   border-color: #5f9ea0;
   border-radius: 10px;
   width: auto;
   height: auto;
+  top: 100px;
+  left: 25%;
+  bottom: 30px;
+  right: 25%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.addAccountMainInside {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 5;
+  justify-content: space-around;
+  border-left: solid;
+  border-color: #5f9ea0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -298,8 +331,7 @@
   top: 15px;
 }
 
-.urlListSpan {
-}
+.urlListSpan {}
 
 .urlListInput {
   width: auto;
@@ -334,18 +366,18 @@
   flex-grow: 5;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: auto
+  width: auto;
 }
 
 .buttonGroup {
   flex-grow: 1;
+  min-width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: flex-start;
-  width: auto;
+  align-items: center;
 }
 
 .userName {
@@ -365,9 +397,6 @@
 
 .userNameInput:focus {
   outline: none;
-}
-
-.password {
 }
 
 .passwordInput {
@@ -399,6 +428,20 @@
   text-align: center;
 }
 
+.generalDeleteButton {
+  /* position: absolute;
+  bottom: 70px;
+  right: 260px; */
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: #992222;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
 .clearButton:hover {
   cursor: pointer;
 }
@@ -421,8 +464,19 @@
   cursor: pointer;
 }
 
+.copyPassword {
+  background-image: url("../icons/copy-password-icon.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 30px;
+  user-select: none;
+}
+
 .passwordShow {
-  background-image: url("../icons/hide-password-icon.svg");
+  background-image: url("../icons/show-password-icon.svg");
   background-repeat: no-repeat;
   position: absolute;
   width: 20px;
@@ -442,6 +496,11 @@
 }
 
 .profilePageMain {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   position: absolute;
   border: solid;
   border-color: #5f9ea0;
@@ -452,9 +511,11 @@
   left: 25%;
   bottom: 30px;
   right: 25%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", s
 }
 
 .profilePageInfo {
@@ -464,15 +525,36 @@
   left: 40px;
 }
 
+div.profileInfo {
+  flex-grow: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+div.profileInfo>input {
+  flex-grow: 1;
+  width: 300px;
+  max-height: 30px;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  border: none;
+  border-bottom: solid;
+  border-color: gray;
+  border-width: thin;
+}
+
 .profilePageIcon {
-  background-image: url("../icons/user-icon.svg");
-  position: absolute;
+  flex-grow: 1;
+  background-image: url(/img/user-icon.c40fe570.svg);
+  margin-top: 10px;
   width: 50px;
-  height: 50px;
-  left: 65px;
-  top: 60px;
+  max-height: 50px;
   background-color: #5f9ea0;
   border-radius: 50%;
+  align-items: center;
 }
 
 .userNameInfo {
@@ -531,22 +613,6 @@
   position: absolute;
   left: 150px;
   top: 250px;
-}
-
-.changePassword {
-  position: absolute;
-  left: 150px;
-  top: 285px;
-  width: 300px;
-  height: 30px;
-  font-size: 17px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: lighter;
-  border: none;
-  border-bottom: solid;
-  border-color: gray;
-  border-width: thin;
 }
 
 .cancelChangesButton {
@@ -642,6 +708,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -666,11 +733,11 @@
   top: 0px;
 }
 
-.accountList > li {
+.accountList>li {
   list-style-type: none;
 }
 
-.accountList > li.selected {
+.accountList>li.selected {
   color: #5f9ea0;
 }
 
@@ -693,7 +760,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.allAccountsPageMain > .accountsSection {
+.allAccountsPageMain>.accountsSection {
   flex-grow: 1;
   flex-basis: 20%;
   display: flex;
@@ -702,7 +769,7 @@
   justify-content: space-around;
 }
 
-.allAccountsPageMain > .accountInfo {
+.allAccountsPageMain>.accountInfo {
   flex-grow: 2;
   display: flex;
   flex-wrap: nowrap;
@@ -710,7 +777,7 @@
   justify-content: space-around;
 }
 
-.allAccountsPageMain > .accountInfo > div {
+.allAccountsPageMain>.accountInfo>div {
   display: flex;
   justify-content: flex-start;
 }

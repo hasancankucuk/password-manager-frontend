@@ -1,24 +1,23 @@
 <template>
-  <div>
-    <div class="addAccountMain">
-      <div class="loginInfoBox">
-        <div>
+  <div class="addAccountMain">
+    <div class="loginInfoBox">
+      <div>
         <input
           placeholder="URL"
           class="userNameInput"
           type="email"
           v-model="saveAccountInfoModel.savedUrl"
         />
-        </div>
-        <div>
+      </div>
+      <div>
         <input
           placeholder="Username"
           class="userNameInput"
           type="email"
           v-model="saveAccountInfoModel.savedUsername"
         />
-        </div>
-        <div>
+      </div>
+      <div>
         <input
           placeholder="Password"
           class="passwordInput"
@@ -30,12 +29,11 @@
           @click="showPassword()"
           :class="{ active: isActive }"
         />
-        </div>
       </div>
-      <div class="buttonGroup">
-        <button class="generalButton" @click="clearInfo()">Clear</button>
-        <button class="generalButton" @click="saveAccount()">Save</button>
-      </div>
+    </div>
+    <div class="buttonGroup">
+      <button class="generalButton" @click="clearInfo()">Clear</button>
+      <button class="generalButton" @click="saveAccount()">Add</button>
     </div>
   </div>
 </template>
