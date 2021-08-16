@@ -89,6 +89,11 @@ export default {
         .deleteUser(this.userInfoModel.id)
         .then((response) => {
           console.log(response);
+          this.$store.commit("LOGIN_USER");
+          localStorage.removeItem("token");
+          localStorage.removeItem("username");
+          localStorage.removeItem("tokenId");
+          this.$router.push("login");
         })
         .catch((err) => {
           console.log(err);
