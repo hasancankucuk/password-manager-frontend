@@ -31,7 +31,6 @@
         </button>
       </div>
     </div>
-    <div class="profilePageInfo" :class="{ blurredProfilePage: isSaved }"></div>
     <div class="savedPopup" v-show="isSaved">
       <button class="closePopupButton" @click="closePopup()"></button>
       <h4 class="savedHeader">Changes Have Been Saved Succesfully</h4>

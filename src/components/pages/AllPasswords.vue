@@ -58,8 +58,8 @@
 
 <script>
 import saveAccountInfoModel from "../../models/saveAccountInfoModel";
-
 import userInfoService from "../../services/userInfoService";
+import { mapState } from "vuex";
 
 export default {
   name: "AllPasswords",
@@ -72,6 +72,9 @@ export default {
       type: "password",
       isActive: false,
     };
+  },
+  computed: {
+    ...mapState(["searchText"]),
   },
   methods: {
     deleteInfo() {
@@ -120,7 +123,7 @@ export default {
     },
     getAccounts() {
       this.userService
-        .getAllPasswords(localStorage.getItem("token"))
+        .getAllPasswords("")
         .then((response) => {
           this.isNoneSelected = true;
           this.accounts = response.data ? response.data : [];
@@ -158,6 +161,20 @@ export default {
   },
   mounted() {
     this.getAccounts();
+  },
+  watch: {
+    searchText: function(newValue) {
+      this.userService
+        .getAllPasswords(newValue)
+        .then((response) => {
+          this.isNoneSelected = true;
+          this.accounts = response.data ? response.data : [];
+          this.accounts.forEach((x) => (x.selected = false));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
   },
 };
 </script>

@@ -60,16 +60,15 @@ export default class UserInfoService {
     // #endregion
 
     // #region SaveAccountInfo
-    getAllPasswords(userName) {
-        if (!userName) {
-            return;
+    getAllPasswords(searchText) {
+        if (!searchText) {
+            searchText = "";
         }
 
         var config = {
             method: "GET",
-            url: `${this.apiPath}SaveAccountInfo/allAccounts/${localStorage.getItem('tokenId')}`,
-            headers: {},
-            data: userName
+            url: `${this.apiPath}SaveAccountInfo/allAccounts/${localStorage.getItem('tokenId')}/${searchText}`,
+            headers: {}
         };
         return this.axios(config);
     }

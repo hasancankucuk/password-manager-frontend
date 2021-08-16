@@ -11,7 +11,8 @@ export const store = new Vuex.Store({
   state: {
     isLogged: !localStorage.getItem('token'),
     user: {},
-    accounts: []
+    accounts: [],
+    searchText: ""
   },
   actions: {
 
@@ -20,6 +21,9 @@ export const store = new Vuex.Store({
     /*  eslint-disable no-param-reassign */
     LOGIN_USER(state) {
       state.isLogged = true;
+    },
+    SEARCH_TEXT(state, payload) {
+      state.searchText = payload;
     },
     /* eslint-disable no-param-reassign */
     LOGOUT_USER(state) {

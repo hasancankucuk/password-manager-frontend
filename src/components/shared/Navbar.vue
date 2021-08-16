@@ -50,7 +50,7 @@
       </div>
       <div class="logo-header">
         <h2>
-          <router-link class="logo-router" to="/"
+          <router-link class="logo-router" to="/all-passwords"
             >Password <span> Manager</span></router-link
           >
         </h2>
@@ -62,6 +62,8 @@
             type="search"
             placeholder="Search"
             aria-label="Search"
+            v-model="searchText"
+            @keyup="search()"
           />
         </form>
         <router-link to="/profile">
@@ -83,6 +85,7 @@ export default {
   data() {
     return {
       opened: false,
+      searchText: ""
     };
   },
   methods: {
@@ -99,6 +102,12 @@ export default {
     redirect(path) {
       if (this.$route.path != path) this.$router.push(path);
     },
+    search() {
+      if (this.$route.path !== "/all-passwords") {
+        this.$router.push("/all-passwords");
+      }
+      this.$store.commit("SEARCH_TEXT", this.searchText);
+    }
   },
   directives: {
     ClickOutside,

@@ -473,9 +473,11 @@
 }
 
 .copyPassword {
-  background-image: url("../icons/copy-password-icon.png");
+  background-image: url("../icons/copy-password-icon.svg");
   background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
+  margin-left: 10px;
   width: 20px;
   height: 20px;
   cursor: pointer;
